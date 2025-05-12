@@ -1,0 +1,34 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>WebSmart Sistema</title>
+</head>
+<body>
+  <h1>Bem-vindo ao WebSmart</h1>
+  <p id="status">Carregando Firebase...</p>
+
+  <!-- Firebase SDK via <script> (modo rápido) -->
+  <script type="module">
+    // Importando direto do CDN (modo script)
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBuJeHjXVVc8RWpdXkhgm55AJFQa4_rsI8",
+      authDomain: "websmartsistema.firebaseapp.com",
+      projectId: "websmartsistema",
+      storageBucket: "websmartsistema.appspot.com",
+      messagingSenderId: "638857474304",
+      appId: "1:638857474304:web:1c8fbf8f46aad6c36b43e5",
+      measurementId: "G-FFK6LC717K"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    document.getElementById("status").innerText = "Firebase conectado!";
+  </script>
+</body>
+</html>
